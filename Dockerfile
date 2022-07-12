@@ -4,7 +4,7 @@ RUN apk add --no-cache bash
 RUN set -ex && apk --no-cache add sudo
 
 USER root
-chown root:root /usr/bin
-chmod u+s /usr/bin/sudo
+RUN chown root:root /usr/bin
+RUN chmod u+s /usr/bin/sudo
 
 ADD setup /setup
